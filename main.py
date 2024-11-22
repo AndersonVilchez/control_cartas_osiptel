@@ -1,4 +1,3 @@
-
 import imaplib
 import email
 from email.header import decode_header
@@ -7,7 +6,11 @@ import pandas as pd
 # Conexión al correo
 IMAP_SERVER = "imap.gmail.com"  # Cambiar si no usas Gmail
 EMAIL = "anderson.vilchez@telefonica.com"
-PASSWORD = "tu_contraseña"
+PASSWORD = "tu_contraseña"  # Reemplaza con tu contraseña de aplicación
+
+# Asegurarse de que el email y la contraseña estén correctamente codificados
+EMAIL = EMAIL.encode('utf-8')
+PASSWORD = PASSWORD.encode('utf-8')
 
 # Conectar al servidor
 mail = imaplib.IMAP4_SSL(IMAP_SERVER)
