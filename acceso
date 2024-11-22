@@ -1,0 +1,18 @@
+import imaplib
+
+# Configuración para cuentas corporativas de Outlook
+IMAP_SERVER = "outlook.office365.com"
+PORT = 993  # Puerto seguro para IMAP con SSL
+EMAIL = "anderson.vilchez@telefonica.com"  # Tu correo corporativo
+PASSWORD = "tu_contraseña"  # Contraseña de tu cuenta o contraseña de aplicación
+
+try:
+    # Conexión al servidor IMAP
+    mail = imaplib.IMAP4_SSL(IMAP_SERVER, PORT)
+    mail.login(EMAIL, PASSWORD)
+    print("Inicio de sesión exitoso en la cuenta Outlook.")
+    mail.logout()
+except imaplib.IMAP4.error as e:
+    print(f"Error de autenticación: {e}")
+except Exception as e:
+    print(f"Error inesperado: {e}")
