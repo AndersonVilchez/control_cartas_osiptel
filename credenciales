@@ -1,0 +1,6 @@
+EMAIL = "anderson.vilchez@telefonica.com"
+PASSWORD = "#Anviles2030"
+
+# Validar que EMAIL y PASSWORD sean cadenas
+if not isinstance(EMAIL, str) or not isinstance(PASSWORD, str):
+    raise ValueError("El correo y la contraseña deben ser cadenas.")
