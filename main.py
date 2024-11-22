@@ -6,7 +6,7 @@ import pandas as pd
 # Conexión al correo
 IMAP_SERVER = "imap.gmail.com"  # Cambiar si no usas Gmail
 EMAIL = "anderson.vilchez@telefonica.com"
-PASSWORD = "tu_contraseña"  # Reemplaza con tu contraseña de aplicación
+PASSWORD = "#Anviles2030"  # Reemplaza con tu contraseña de aplicación
 
 # Asegurarse de que el email y la contraseña estén correctamente codificados
 EMAIL = EMAIL.encode('utf-8')
